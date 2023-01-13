@@ -25,6 +25,9 @@ h1{
 	font-size: 3.6rem;
 	line-height: 90px;
 }
+h2{
+	font-size: 2rem;
+}
 p{
 	color: var(--txt_s);
 }
@@ -126,4 +129,58 @@ p{
 .home .big{
 	text-align: center;
 	padding: 0 150px;
+}
+.about{
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: auto;
+}
+.bio{
+	display: grid;
+	grid: 1fr 90px / min-content 1fr;
+	padding: 20px;
+	place-items: stretch end;
+	gap: 10px;
+}
+.bio h1{
+	text-align: right;
+}
+.bio img{
+	align-self: center;
+	grid-row: span 2;
+	width: 200px;
+}
+.bio p{
+	grid-column: 2 / 3;
+}
+.des{
+	position: relative;
+	display: grid;
+	grid: 1fr / 1fr 1fr;
+	background-color: var(--sub_bg);
+	border-radius: 20px;
+	padding: 30px 60px;
+	gap: 60px;
+}
+.des::before{
+	position: absolute;
+	content: "";
+	width: 1px;
+	height: 70%;
+	inset: 0;
+	margin: auto;
+	background: var(--txt_s);
+}
+.des p{
+	text-align: justify;
+	font-size: 1.2rem;
+}
+.des_con{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 20px;
 }
