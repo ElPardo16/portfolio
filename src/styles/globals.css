@@ -10,15 +10,31 @@
 	--bg: #121212;
 	--sub_bg: #1f1f1f;
 	--txt_p: white;
-	--txt_s: rgba(255,255,255,.8) 
+	--txt_s: rgba(255,255,255,.8);
+	--txt_t: #21D863;
+	--btn: #26c560;
 }
 body{
 	background-color: var(--bg);
 }
+h1,h2{
+	color: var(--txt_t);
+	text-align: center;
+}
+h1{
+	font-size: 3.6rem;
+	line-height: 90px;
+}
+p{
+	color: var(--txt_s);
+}
+.app{
+	display: grid;
+	grid: 1fr / min-content 1fr;
+}
 .menu{
-	position: fixed;
-	width: 30%;
-	max-width: 300px;
+	position: sticky;
+	width: 300px;
 	height: 100vh;
 	background-color: var(--sub_bg);
 }
@@ -76,9 +92,6 @@ body{
 .con_menu img{
 	width: 60%;
 }
-.menu .social{
-	
-}
 .social{
 	position: relative;
 	display: flex;
@@ -88,4 +101,29 @@ body{
 .social a{
 	display: block;
 	height: 45px;
+}
+.big{
+	font-size: 2rem;
+}
+.btn{
+	padding: 15px 60px;
+	background-color: var(--btn);
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.6rem;
+	color: var(--txt_p);
+	border-radius: 10px;
+}
+.btn:hover{
+	background-color: var(--accent);
+}
+.home{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.home .big{
+	text-align: center;
+	padding: 0 150px;
 }
