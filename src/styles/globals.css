@@ -29,6 +29,10 @@ h2{
 	font-size: 2rem;
 }
 p{
+	font-size: 1.2rem;
+	color: var(--txt_s);
+}
+a{
 	color: var(--txt_s);
 }
 .app{
@@ -78,7 +82,6 @@ p{
 }
 .menu a{
 	text-decoration: none;
-	color: var(--txt_s);
 	font-size: 1.4rem;
 }
 .menu li a:hover::before{
@@ -183,4 +186,86 @@ p{
 	flex-direction: column;
 	justify-content: flex-start;
 	gap: 20px;
+}
+.skills{
+
+}
+.skills h1{
+	display: none;
+}
+.contact{
+	width: 65%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.contact ,.contact form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.contact form{
+	gap: 30px;
+}
+.contact form input, .contact form textarea{
+	padding-left: 20px;
+	color: var(--txt_s);
+	position: relative;
+	border-radius: 10px;
+	border: 1px var(--accent) solid;
+	background-color: transparent;
+	font-size: 1.2rem;
+}
+.con_i{
+	position: relative;
+	display: grid;
+}
+.contact form input ~ label, .contact form textarea ~ label
+{
+	position: absolute;
+	font-size: 1.2rem;
+	width: fit-content;
+	height: fit-content;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	color: var(--txt_s);
+	background: var(--bg);
+	transition: all ease .3s;
+}
+.contact form textarea ~ label{
+	top: 20px;
+}
+.contact form input:focus, .contact form textarea:focus{
+	border-color: var(--txt_t);
+	outline: none;
+}
+.contact form input:focus ~ label, .contact form textarea:focus ~ label,
+.contact form input:not(:placeholder-shown) ~ label, .contact form textarea:not(:placeholder-shown)~ label
+{
+	padding: 0 10px;
+	top: 0;
+	left: 10px;
+	font-size: 1rem;
+	color: var(--txt_t);
+}
+.contact form input:invalid ~ label, .contact form textarea:invalid ~ label
+{
+	color: rgba(255, 0, 0, 0.8);
+}
+.contact form input:invalid, .contact form textarea:invalid
+{
+	border-color: red;
+}
+/*:valid :invalid*/
+.contact form input{
+	height: 60px;
+}
+.contact form textarea{
+	resize: none;
+	padding-top: 20px;
+}
+.other{
+	display: grid;
+	gap: 30px;
+	text-align: center;
 }
