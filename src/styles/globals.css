@@ -1,26 +1,91 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+:root{
+	--accent: #00BB44;
+	--bg: #121212;
+	--sub_bg: #1f1f1f;
+	--txt_p: white;
+	--txt_s: rgba(255,255,255,.8) 
+}
+body{
+	background-color: var(--bg);
+}
+.menu{
+	position: fixed;
+	width: 30%;
+	max-width: 300px;
+	height: 100vh;
+	background-color: var(--sub_bg);
+}
+.menu nav{
+	position: relative;
+	height: 100%;
+	font-weight: bold;
+	color: var(--txt_s);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.menu ul{
+	list-style: none;
+}
+.menu li a{
+	position: relative;
+	height: 60px;
+	padding-left: 30px;
+	display: grid;
+	place-items: center start;
+}
+.menu li a:not(.select):before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -105%;
+	width: 105%;
+	height: 100%;
+	background-color: var(--accent);
+	z-index: -1;
+	transition: all ease .3s;
+}
+.menu .select{
+	background-color: var(--accent);
+	color: var(--txt_p);
+	width: 105%;
+}
+.menu a{
+	text-decoration: none;
+	color: var(--txt_s);
+	font-size: 1.4rem;
+}
+.menu li a:hover::before{
+	left: 0;
+}
+.menu li a:hover{
+	color: var(--txt_p);
+}
+.con_menu{
+	display: grid;
+	place-items: center;
+	gap: 40px;
+}
+.con_menu img{
+	width: 60%;
+}
+.menu .social{
+	
+}
+.social{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+.social a{
+	display: block;
+	height: 45px;
 }
