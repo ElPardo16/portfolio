@@ -1,16 +1,20 @@
 import Label from "./Label";
 import {skills} from "../utils/data"
+// import dependencies
 
 export default function SkillCon({title, clss = "s_con", list}) {
+    // map the list of skills to render and find the correct object
     const listSkill = list.map(item => {
         return skills.find(s => s.id === item)
     })
 
   return (
     <div className={clss}>
+        {/* return a h1 if true else a p tag */}
         {clss === "s_con" ? <h2>{title}</h2> 
         : <p>Habilidades:</p>}
         <div className="labels">
+            {/* render a list of skills previously saved */}
             {listSkill.map(({id, title, icon}) => <Label key={id} iName={icon} skill={title}/>)}
         </div>
     </div>

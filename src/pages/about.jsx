@@ -1,8 +1,10 @@
 import Button from '../components/Button'
 import Layout from '../components/Layout'
-
+// import dependencies
 export default function About() {
 	return (
+		// the layout is a component tha repeat in all pages, header and menu
+		// set the menu select item
 		<Layout title="about" about={true}>
 			<div className="about">
 				<div className="bio">

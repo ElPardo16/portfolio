@@ -1,13 +1,16 @@
 import Button from '../components/Button'
 import Layout from '../components/Layout'
 import Social from '../components/Social'
-
+// import dependencies
 export default function Contact() {
+    // handler of click event to submit form
     const clickHandler = e => {
         e.preventDefault()
         alert("Correo enviado")
     }
     return (
+        // the layout is a component tha repeat in all pages, header and menu
+		// set the menu select item
         <Layout title="contact" con={true}>
             <div className="contact">
                 <h1>Contactame</h1>

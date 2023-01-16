@@ -1,18 +1,15 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
-/* import * as Di from "react-icons/di"; */
+// import dependencies
 
 export default function Label({iName, skill}) {
-    /* const icons = {
-        icon: Di.DiApple
-    } */
+    // import dinamically the icon in the iName property
     const Icon = dynamic(() => import('react-icons/si').then(icons => icons[iName]))
- /*    const Icon = Di[iName] */
   return (
     <div className='label'>
-        {/* {React.createElement(icons.icon)}
-        <NotificationIcon/> */}
+        {/* use the Icon component to render a icon with a size of 25 px */}
         <Icon size={25}/>
+        {/* set the label with the name of skill */}
         <span>{skill}</span>
     </div>
   )

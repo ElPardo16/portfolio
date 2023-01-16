@@ -1,3 +1,4 @@
+// list of skills
 export const skills = [
     {
         id: 1,
@@ -120,6 +121,7 @@ export const skills = [
         icon: "SiGnubash"
     }
 ]
+// list of projects
 export const projects = [
     {
         id: "ep",
@@ -185,6 +187,8 @@ export const projects = [
         prior: 3
     } */
 ]
+// list of certificates
+
 export const certs = [
     "d1.png",
     "d2.png",
