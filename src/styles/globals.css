@@ -328,7 +328,7 @@ nav>span {
 	padding-bottom: 20px;
 }
 .s_info .labels{
-	justify-content: center;
+	flex-direction: column;
 }
 
 .s_info p {
@@ -451,6 +451,7 @@ nav>span {
 }
 
 .l_certs {
+	justify-content: center;
 	gap: 30px;
 }
 
@@ -681,7 +682,7 @@ nav>span {
 		padding-top: 60px;
 	}
 
-	.menu span {
+	.menu nav > span {
 		display: inline-block;
 		position: absolute;
 		top: 25px;
