@@ -57,7 +57,7 @@ export default function Portfolio() {
     }
     // set the image list when render component
     useEffect(_ => {
-        dispatch(setImgList(projectList.slice(0,5).map(item => item.img)))
+        //dispatch(setImgList(projectList.slice(0,5).map(item => item.img)))
         disable()
     },[])
     // when state select change  calculate next img in cube
@@ -72,7 +72,7 @@ export default function Portfolio() {
     // only for probes
     useEffect(() => {
         
-        console.log(imgList)
+        //console.log(imgList)
     },[imgList])
     // rotate the cube for the next project
     const changueProduct = (next, r) => {

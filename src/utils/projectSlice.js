@@ -3,13 +3,14 @@ import { projects } from "./data"
 // import dependencies
 //get the project with higher priority to set first
 const primary = Math.max(...projects.map(item => item.prior))
+const projectsDef = projects.sort((a,b) => b.prior - a.prior)
 // set the initial state of projects
 const initialState = {
     //the first project to render
     select: projects.find(p => p.prior === primary),
     // order list of projects by priority
-    projectList: projects.sort((a,b) => b.prior - a.prior),
-    imgList: []
+    projectList: projectsDef,
+    imgList: projectsDef.slice(0,4).map(item => item.img)
 }
 
 // create reducers for modify the state

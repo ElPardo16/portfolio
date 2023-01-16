@@ -65,6 +65,13 @@ despues solo utilizamos la variable como un componente y lo renderizamos, asigna
         <Icon size={25}/>
 
 
+## Performance
+
+Se hizo uso del hook useMemo para no renderizar en vano cuando un estado cambia y asi mejorar el performance de la aplicacion, ademas de evitar bugs visuales en ciertos componentes que requieren mas recursos para ser dibujados en pantalla
+
+
+        const saveIcon = useMemo(_ => <Icon size={25}/>,[])
+
 
 ## En desarrollo...
 

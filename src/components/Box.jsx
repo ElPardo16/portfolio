@@ -5,9 +5,12 @@ import { useSelector } from 'react-redux'
 export default function Box() {
     // get imgList from project state
     const {imgList} = useSelector(state => state.project)
+    console.log(imgList)
     return (
         <div className="box">
-            <div className="front face">
+            {imgList !== [] ? (
+                <>
+                <div className="front face">
                 {/*Replace the src with the img path */}
                 <Image src={`/img/${imgList[0]}`} alt="Imagen proyecto" /* width={400} height={225} */fill="responsive" priority={true} />
             </div>
@@ -20,6 +23,9 @@ export default function Box() {
             <div className="left face">
                 <Image src={`/img/${imgList[3]}`} alt="Imagen proyecto" /* width={400} height={225} */fill="responsive" />
             </div>
+            </>
+            ) : <h1>cargando</h1>}
+            
         </div>
     )
 }
