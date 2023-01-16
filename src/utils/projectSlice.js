@@ -19,11 +19,11 @@ export const projectSlice = createSlice({
         },
         nextImgList: (state, action) => {
             state.imgList.unshift(action.payload)
-            //state.imgList.pop() 
+            state.imgList.pop() 
         },
         backImgList: (state, action) => {
             state.imgList.push(action.payload)
-            //state.imgList.shift() 
+            state.imgList.shift() 
         }
 
     }

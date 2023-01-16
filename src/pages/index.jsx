@@ -8,7 +8,7 @@ export default function Home() {
 			<div className="home">
 				<h1>Bienvenido a mi <br/>portafolio</h1>
 				<p className='big'>Veras lo que puedo hacer y conoceras mas sobre mi</p>
-				<Button text="Vamos"/>
+				<Button text="Vamos" handler={_ => location.href = "/portfolio"}/>
 			</div>
 		</Layout>
 	)

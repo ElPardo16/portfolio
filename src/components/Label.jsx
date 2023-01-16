@@ -6,7 +6,7 @@ export default function Label({iName, skill}) {
     /* const icons = {
         icon: Di.DiApple
     } */
-    let Icon = dynamic(() => import('react-icons/di').then(icons => icons[iName]))
+    let Icon = dynamic(() => import('react-icons/si').then(icons => icons[iName]))
  /*    const Icon = Di[iName] */
   return (
     <div className='label'>

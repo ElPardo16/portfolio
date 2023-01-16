@@ -10,7 +10,7 @@ import { useRef } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
-export default function portfolio() {
+export default function Portfolio() {
     const { select , projectList, imgList } = useSelector(state => state.project)
     const dispatch = useDispatch()
     const rot = useRef(0)
@@ -43,16 +43,16 @@ export default function portfolio() {
         }
     }
     useEffect(_ => {
-        dispatch(setImgList(projectList.slice(0,4).map(item => item.img)))
+        dispatch(setImgList(projectList.slice(0,5).map(item => item.img)))
         disable()
     },[])
     useEffect(_ => {
         disable()
         //console.log(nextSel.current+ "sad")
         console.log(Math.abs(rot.current / 90))
-        if((Math.abs(rot.current / 90) + 1 ) % 4 === 0 && rot.current !== 0) twins.current++
+        if((Math.abs(rot.current / 90) + 1 ) % 5 === 0 && rot.current !== 0) twins.current++
         console.log(twins.current)
-        //calculateNext()
+        calculateNext()
     },[select])
     useEffect(() => {
         
@@ -82,14 +82,7 @@ export default function portfolio() {
             <div className="portfolio">
 
                 <div className="card">
-                    <div className="arrows">
-                        <span ref={l} onClick={_ => void changueProduct(0, 1)}>
-                            <MdKeyboardArrowLeft size={80}/>
-                        </span>
-                        <span ref={r} onClick={_ => void changueProduct(1, -1)}>
-                            <MdKeyboardArrowRight size={80}/>
-                        </span>
-                    </div>
+                    
                     <h1>{select.title}</h1>
                     <div className="gallery">
 
@@ -98,13 +91,21 @@ export default function portfolio() {
                         <Box/>
                         <Box/> */}
                     </div>
+                    <div className="arrows">
+                        <span ref={l} onClick={_ => void changueProduct(0, 1)}>
+                            <MdKeyboardArrowLeft size={80}/>
+                        </span>
+                        <span ref={r} onClick={_ => void changueProduct(1, -1)}>
+                            <MdKeyboardArrowRight size={80}/>
+                        </span>
+                    </div>
                     <div className="links">
-                        <Label iName="DiGithubBadge" skill="Repo" />
-                        <Label iName="DiNetbeans" skill="Deploy" />
+                        <a href={select.repo} target="_blank" rel='noreferrer'><Label iName="SiGithub" skill="Repo" /></a>
+                        <a href={select.deploy} target="_blank" rel='noreferrer'><Label iName="SiNetlify" skill="Deploy" /></a>
                     </div>
                 </div>
                 <div className="info">
-                    <SkillCon clss='s_info' />
+                    <SkillCon clss='s_info' list={select.skills} />
 
                 </div>
             </div>

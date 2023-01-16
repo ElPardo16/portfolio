@@ -3,6 +3,10 @@ import Layout from '../components/Layout'
 import Social from '../components/Social'
 
 export default function Contact() {
+    const clickHandler = e => {
+        e.preventDefault()
+        alert("Correo enviado")
+    }
     return (
         <Layout title="contact" con={true}>
             <div className="contact">
@@ -20,7 +24,7 @@ export default function Contact() {
                         <textarea name="msg" cols="30" rows="5" placeholder=' '></textarea>
                         <label htmlFor="msg">Mensaje</label>
                     </div>
-                    <Button text="Enviar" />
+                    <Button text="Enviar" handler={clickHandler}/>
                 </form>
                 <div className="other">
                     <p>O tambien por...</p>
