@@ -8,7 +8,7 @@ export default function About() {
 		<Layout title="about" about={true}>
 			<div className="about">
 				<div className="bio">
-					<img src="/img/osoColorDev.png" alt="" />
+					<img src="/img/me.png" alt="" />
 					<h1>Andres Felipe Gonzalez Silva</h1>
 					<p className="big">Desarrollador</p>
 				</div>

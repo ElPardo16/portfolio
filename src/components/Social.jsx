@@ -13,7 +13,7 @@ export default function Social({ extra }) {
                 {/* render a icon of social network */}
                 <DiGithubBadge size={45} />
             </a>
-            <a href="https://www.linkedin.com/in/andres-gonzalez-09b43713a/" target="_blank" rel='noreferrer'>
+            <a href="https://www.linkedin.com/in/andres-felipe-gonzalez-silva-09b43713a/" target="_blank" rel='noreferrer'>
                 <FaLinkedin size={45} />
             </a>
             {/* if extra is true render aditional icon */}
