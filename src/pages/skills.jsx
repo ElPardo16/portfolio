@@ -4,6 +4,7 @@ import SkillCon from '../components/SkillCon'
 import { certs, skills } from '../utils/data'
 // import dependencies
 export default function Skills() {
+    /* console.log(skills.map(item => `${item.id} ${item.title}`)) */
     // filter the skill by category and return a new array with only the id
     const getSkills = category => skills.filter(item => item.cat === category).map(({id}) => id)
     return (

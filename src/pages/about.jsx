@@ -15,12 +15,12 @@ export default function About() {
 				<div className="des">
 					<div className="des_con">
 						<h2>¿Quien soy?</h2>
-						<p>Soy una persona que le gusta la programacion, desde los 13 años estoy en este gremio, y cada dia busco mejorar mis habilidades blandas y tecnicas</p>
+						<p>Soy una persona que le gusta la programacion, desde los 13 años estoy en este mundo, y cada dia busco mejorar mis habilidades blandas y tecnicas</p>
 					</div>
 					<div className="des_con">
 						<h2>Curriculum</h2>
 						<p>Puedes descargar mi curriculum a continuacion</p>
-						<Button text="Decargar CV" />
+						<Button text="Decargar CV" handler={_ => void window.open("/curriculum/CV_Andres_Gonzalez.pdf")}/>
 					</div>
 				</div>
 			</div>

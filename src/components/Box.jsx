@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 export default function Box() {
     // get imgList from project state
     const {imgList} = useSelector(state => state.project)
-    console.log(imgList)
     return (
         <div className="box">
             {imgList !== [] ? (

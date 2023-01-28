@@ -43,6 +43,12 @@ export const skills = [
         icon: "SiReact"
     },
     {
+        id: 21,
+        cat: "web",
+        title: "redux",
+        icon: "SiRedux"
+    },
+    {
         id: 8,
         cat: "web",
         title: "next.js",
@@ -129,8 +135,8 @@ export const projects = [
         img: "ep.png",
         repo: "https://github.com/ElPardo16/emprender-publicidad",
         deploy: "https://ep-cliente.netlify.app/",
-        skills: [1,2,3,4,5,6,7,8],
-        prior: 10
+        skills: [1,2,3,4,5,6,7,21,8],
+        prior: 20
     },
     {
         id: "cripto",
@@ -139,53 +145,90 @@ export const projects = [
         repo: "https://github.com/ElPardo16/CriptoDashMod",
         deploy: "https://dash-cripto-mod.netlify.app/",
         skills: [1,2,3,7,11,13],
+        prior: 12
+    },
+    {
+        id: "to-do",
+        title: "To-do Backend",
+        img: "todo.png",
+        repo: "https://github.com/ElPardo16/to-do-grupo3",
+        deploy: "https://to-do-grupo3.netlify.app/",
+        skills: [1,2,3,4,5,6,7,21,8,11,13],
+        prior: 10
+    },
+    {
+        id: "pt",
+        title: "Pagina tributo",
+        img: "pt.png",
+        repo: "https://github.com/ElPardo16/PaginaTributo",
+        deploy: "https://tributo-ng2.netlify.app/",
+        skills: [1,2,3,11,13],
+        prior: 9
+    },
+    {
+        id: "t27",
+        title: "Turret 27",
+        img: "t27.png",
+        repo: null,
+        deploy: "https://andygi.itch.io/turret-27",
+        skills: [14,18],
         prior: 8
+    },
+    {
+        id: "ts",
+        title: "TeSabuj",
+        img: "ts.png",
+        repo: "https://github.com/ElPardo16/TeSabuj",
+        deploy: "https://te-sabuj.netlify.app/",
+        skills: [1,2,3],
+        prior: 7
     }
-    ,{
+    ,
+    {
+        id: "wod",
+        title: "Wheel of doom",
+        img: "wod.png",
+        repo: "https://github.com/ElPardo16/wheel-of-doom-g5",
+        deploy: "https://wheel-of-doom-g5.netlify.app/",
+        skills: [1,2,3,11,13],
+        prior: 6
+    },
+    {
+        id: "t",
+        title: "Tetris",
+        img: "t.png",
+        repo: "https://github.com/ElPardo16/Clon-tetris",
+        deploy: "https://tetris-pro.netlify.app/",
+        skills: [1,2,3,11,13],
+        prior: 5
+    },
+    {
+        id: "c",
+        title: "Calculadora",
+        img: "c.png",
+        repo: "https://github.com/ElPardo16/Calculadora",
+        deploy: "https://pro-calc.netlify.app/",
+        skills: [1,2,3],
+        prior: 4
+    },
+    {
         id: "fs",
         title: "Fundacion Semillas",
         img: "fs.png",
         repo: "https://github.com/ElPardo16/Fundacion-semillas-css",
         deploy: "https://semillas-css.netlify.app/",
         skills: [1,2,3,11,13],
-        prior: 6
-    },
-    {
-        id: "t27",
-        title: "Turret 27",
-        img: "t27.png",
-        repo: "https://andygi.itch.io/turret-27",
-        deploy: "https://andygi.itch.io/turret-27",
-        skills: [14,18],
-        prior: 6
-    },
-    /* {
-        id: "ep1",
-        title: "Emprender publicidad 2",
-        img: "ep.png",
-        repo: "",
-        deploy: "",
-        skills: [],
-        prior: 5
-    },
-    {
-        id: "cripto2",
-        title: "Cripto Dashboard 2",
-        img: "cripto.jpeg",
-        repo: "",
-        deploy: "",
-        skills: [],
-        prior: 4
-    }
-    ,{
-        id: "fs3",
-        title: "Fundacion Semillas 2",
-        img: "fs.png",
-        repo: "",
-        deploy: "",
-        skills: [],
         prior: 3
-    } */
+    },
+    {
+        id: "rd",
+        title: "Replica Deezer",
+        img: "rd.png",
+        repo: "https://github.com/ElPardo16/Replica-Deezer",
+        deploy: "https://replica-deezer-g1.netlify.app/",
+        skills: [1,2,3,11,13],
+        prior: 2
+    }
 ]
 // list of certificates
 

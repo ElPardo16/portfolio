@@ -11,6 +11,7 @@ const initialState = {
     // order list of projects by priority
     projectList: projectsDef,
     imgList: projectsDef.slice(0,4).map(item => item.img)
+    //imgList: [0,1,2,3]
 }
 
 // create reducers for modify the state
@@ -25,17 +26,22 @@ export const projectSlice = createSlice({
             state.imgList = action.payload
         },
         nextImgList: (state, action) => {
-            state.imgList.unshift(action.payload)
-            state.imgList.pop() 
+            const {index, img} = action.payload
+            /* state.imgList.unshift(action.payload)
+            state.imgList.pop() */ 
+            state.imgList[index] = img
         },
-        backImgList: (state, action) => {
-            state.imgList.push(action.payload)
-            state.imgList.shift() 
+        nextBackImgList: (state, action) => {
+            /* state.imgList.push(action.payload)
+            state.imgList.shift()  */
+            const {next, back, imgN, imgB} = action.payload
+            state.imgList[next] = imgN
+            state.imgList[back] = imgB
         }
 
     }
 })
 
 //export the reducers an the state
-export const { changueSel, setImgList, nextImgList, backImgList } = projectSlice.actions
+export const { changueSel, setImgList, nextImgList, nextBackImgList } = projectSlice.actions
 export default projectSlice.reducer
