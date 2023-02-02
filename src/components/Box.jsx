@@ -10,16 +10,16 @@ export default function Box() {
         <>
                 <div className="front face">
                     {/*Replace the src with the img path */}
-                    <Image src={`/img/${imgList[0]}`} alt="Imagen proyecto" /* width={400} height={225} */ fill="responsive" priority={true} />
+                    <Image src={`/img/${imgList[0]}`} alt="Imagen proyecto" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill="responsive" priority={true} />
                 </div>
                 <div className="right face">
-                    <Image src={`/img/${imgList[1]}`} alt="Certificado" /* width={400} height={225} */ fill="responsive" />
+                    <Image src={`/img/${imgList[1]}`} alt="Certificado" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill="responsive" priority={true}  />
                 </div>
                 <div className="back face">
-                    <Image src={`/img/${imgList[2]}`} alt="Imagen proyecto" /* width={400} height={225} */ fill="responsive" />
+                    <Image src={`/img/${imgList[2]}`} alt="Imagen proyecto" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill="responsive" priority={true} />
                 </div>
                 <div className="left face">
-                    <Image src={`/img/${imgList[3]}`} alt="Imagen proyecto" /* width={400} height={225} */ fill="responsive" />
+                    <Image src={`/img/${imgList[3]}`} alt="Imagen proyecto" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill="responsive" priority={true} />
                 </div>
             </>
     ))
