@@ -73,15 +73,32 @@ Se hizo uso del hook useMemo para no renderizar en vano cuando un estado cambia 
         const saveIcon = useMemo(_ => <Icon size={25}/>,[])
 
 
-## En desarrollo...
 
-- implementar envio de correo
-- alertas al enviar correo
-- al dar al boton de descargar hoja de vida, que la descargue, ya que aun no esta hecha
-- cargar mas proyectos
-- cargar mas certificados
+## Nodemailer
+
+Se implemento nodemailer para el envio de un correo en el formulario de contacto, se enlazo al servidor SMTP de gmail, todo esto se logro creando unas opciones para el correo y usando la funcion <code>sendMail()</code> de la libreria.
+
+- Opciones
+
+        const transporter = createTransport({
+            service: "Gmail",
+            auth: {
+            user: "process.env.email", // generated ethereal user
+            pass: process.env.pass, // generated ethereal password
+            },
+        })
 
 
+- Envio del correo
 
-
+        let data = await transporter.sendMail({
+            from: '"Contacto Portafolio 🐻" <andresito105@gmail.com>', // sender address
+            to: "andresito105@gmail.com", // list of receivers
+            subject: "Contacto Portafolio 🐻", // Subject line
+            html: `<h1>Mensaje:</h1>
+                    <p>${info.msg}</p>
+                    <h2>Persona:</h2>
+                    <p>${info.name}</p>
+                    <p>${info.mail}</p>`
+        })
 

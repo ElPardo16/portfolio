@@ -4,7 +4,7 @@ export const sendContactMail = async info => {
     const transporter = createTransport({
         service: "Gmail",
         auth: {
-          user: "andresito105@gmail.com", // generated ethereal user
+          user: process.env.email, // generated ethereal user
           pass: process.env.pass, // generated ethereal password
         },
       })
