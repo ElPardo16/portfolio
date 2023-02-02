@@ -1,5 +1,6 @@
 import Label from "./Label";
 import {skills} from "../utils/data"
+import { useMemo } from "react";
 // import dependencies
 
 export default function SkillCon({title, clss = "s_con", list}) {
@@ -7,6 +8,7 @@ export default function SkillCon({title, clss = "s_con", list}) {
     const listSkill = list.map(item => {
         return skills.find(s => s.id === item)
     })
+    const mapSkill = useMemo(_ => listSkill.map(({id, title, icon}) => <Label key={id} iName={icon} skill={title}/>))
 
   return (
     <div className={clss}>
@@ -15,7 +17,7 @@ export default function SkillCon({title, clss = "s_con", list}) {
         : <p>Tecnologias usadas:</p>}
         <div className="labels">
             {/* render a list of skills previously saved */}
-            {listSkill.map(({id, title, icon}) => <Label key={id} iName={icon} skill={title}/>)}
+            {mapSkill}
         </div>
     </div>
   )
