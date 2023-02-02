@@ -1,14 +1,13 @@
 import Image from 'next/image'
+import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import imgPrimary from "../../public/img/ep.png"
 // import dependencies
 
 export default function Box() {
     // get imgList from project state
     const { imgList } = useSelector(state => state.project)
-    return (
-        <div className="box">
-            <>
+    const gallery = useMemo(_ => (
+        <>
                 <div className="front face">
                     {/*Replace the src with the img path */}
                     <Image src={`/img/${imgList[0]}`} alt="Imagen proyecto" /* width={400} height={225} */ fill="responsive" priority={true} />
@@ -23,6 +22,10 @@ export default function Box() {
                     <Image src={`/img/${imgList[3]}`} alt="Imagen proyecto" /* width={400} height={225} */ fill="responsive" />
                 </div>
             </>
+    ))
+    return (
+        <div className="box">
+            {gallery}
         </div>
     )
 }

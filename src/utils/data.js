@@ -145,6 +145,15 @@ export const projects = [
         prior: 20
     },
     {
+        id: "mc",
+        title: "Movies CRUD",
+        img: "m.png",
+        repo: "https://github.com/ElPardo16/video_club",
+        deploy: "https://video-club-grupo3.netlify.app/",
+        skills: [1,2,3,4,5,6,7,22,8,11,13],
+        prior: 14
+    },
+    {
         id: "cripto",
         title: "Cripto Dashboard",
         img: "cripto.jpeg",
@@ -155,7 +164,7 @@ export const projects = [
     },
     {
         id: "to-do",
-        title: "To-do Backend",
+        title: "To-do CRUD",
         img: "todo.png",
         repo: "https://github.com/ElPardo16/to-do-grupo3",
         deploy: "https://to-do-grupo3.netlify.app/",
