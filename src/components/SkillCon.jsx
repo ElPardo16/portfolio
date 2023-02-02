@@ -12,7 +12,7 @@ export default function SkillCon({title, clss = "s_con", list}) {
     <div className={clss}>
         {/* return a h1 if true else a p tag */}
         {clss === "s_con" ? <h2>{title}</h2> 
-        : <p>Habilidades:</p>}
+        : <p>Tecnologias usadas:</p>}
         <div className="labels">
             {/* render a list of skills previously saved */}
             {listSkill.map(({id, title, icon}) => <Label key={id} iName={icon} skill={title}/>)}

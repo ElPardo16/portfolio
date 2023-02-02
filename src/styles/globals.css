@@ -7,6 +7,26 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+body .swal2-popup{
+	background: var(--sub_bg);
+	border-radius: 10px;
+}
+body .swal2-title{
+	color: var(--txt_p);
+}
+body .swal2-html-container{
+	color: var(--txt_s);
+}
+body .swal2-icon.swal2-success [class^=swal2-success-line]{
+	background-color: var(--accent);
+}
+body .swal2-icon.swal2-success .swal2-success-ring{
+	border-color: rgba(0, 187, 68,.3);
+}
+body .swal2-confirm.swal2-styled{
+	background-color: var(--accent);
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -366,9 +386,9 @@ nav>span {
 	/* transition: all ease .4s; */
 }
 
-.box:hover {
-	/* transform: translateZ(-200px) rotateY(-90deg) ; */
-}
+/* .box:hover {
+	/* transform: translateZ(-200px) rotateY(-90deg) ; 
+} */
 
 .disabled {
 	pointer-events: none;
@@ -732,5 +752,8 @@ nav>span {
 
 	.contact {
 		width: 80%;
+	}
+	.other{
+		margin-top: 20px;
 	}
 }

@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import Button from '../components/Button'
 import Layout from '../components/Layout'
+import imgProfile from "../../public/img/me.png"
 // import dependencies
 export default function About() {
 	return (
@@ -8,14 +10,14 @@ export default function About() {
 		<Layout title="about" about={true}>
 			<div className="about">
 				<div className="bio">
-					<img src="/img/me.png" alt="" />
+					<Image src={imgProfile} alt="Foto de perfil" width={200} height={266} placeholder='blur' priority={true} />
 					<h1>Andres Felipe Gonzalez Silva</h1>
 					<p className="big">Desarrollador</p>
 				</div>
 				<div className="des">
 					<div className="des_con">
 						<h2>¿Quien soy?</h2>
-						<p>Soy una persona que le gusta la programacion, desde los 13 años estoy en este mundo, y cada dia busco mejorar mis habilidades blandas y tecnicas</p>
+						<p>Soy desarrollador hace 6 años, he trabajado en proyectos personales, como también en proyectos freelance para pulir mis habilidades técnicas.</p>
 					</div>
 					<div className="des_con">
 						<h2>Curriculum</h2>

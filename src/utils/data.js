@@ -19,6 +19,12 @@ export const skills = [
         icon: "SiJavascript"
     },
     {
+        id: 22,
+        cat: "web",
+        title: "sass",
+        icon: "SiSass"
+    },
+    {
         id: 4,
         cat: "web",
         title: "node.js",
