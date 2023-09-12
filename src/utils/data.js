@@ -31,6 +31,12 @@ export const skills = [
         icon: "SiNodedotjs"
     },
     {
+        id: 23,
+        cat: "web",
+        title: "nest.js",
+        icon: "SiNestjs"
+    },
+    {
         id: 5,
         cat: "web",
         title: "express",
@@ -135,6 +141,24 @@ export const skills = [
 ]
 // list of projects
 export const projects = [
+    {
+        id: "pos",
+        title: "MyTokenPay",
+        img: "pos.png",
+        repo: null,
+        deploy: "https://www.mytokenpay-pos.com/",
+        skills: [1,2,3,23,6,7,21,8],
+        prior: 30
+    },
+    {
+        id: "vw",
+        title: "Veta Wallet",
+        img: "vw.png",
+        repo: null,
+        deploy: "https://www.vetawallet.com/",
+        skills: [1,2,3,4,5,6,7,21,8],
+        prior: 22
+    },
     {
         id: "ep",
         title: "Emprender publicidad",
