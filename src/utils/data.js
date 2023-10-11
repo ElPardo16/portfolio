@@ -25,6 +25,18 @@ export const skills = [
         icon: "SiSass"
     },
     {
+        id: 24,
+        cat: "web",
+        title: "wordpress",
+        icon: "SiWordpress"
+    },
+    {
+        id: 25,
+        cat: "web",
+        title: "shopify",
+        icon: "SiShopify"
+    },
+    {
         id: 4,
         cat: "web",
         title: "node.js",
